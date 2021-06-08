@@ -12,7 +12,7 @@ output:
 
 
 ```{r setup, include=FALSE}
-#knitr::opts_chunk$set(echo = TRUE, error=TRUE, message=FALSE, warning=FALSE)
+knitr::opts_chunk$set(echo = TRUE, error=TRUE, message=FALSE, warning=FALSE)
 ```
 
 ```{r libraries}
@@ -161,7 +161,7 @@ Here is the code to read in the data. We do this a little differently than usual
 
 ```{r cache=TRUE}
 data_site <- 
-  "https://www.macalester.edu/~dshuman1/data/112/2014-Q4-Trips-History-Data-Small.rds" 
+  "https://www.macalester.edu/~dshuman1/data/112/2014-Q4-Trips-History-Data.rds" 
 Trips <- readRDS(gzcon(url(data_site)))
 Stations<-read_csv("http://www.macalester.edu/~dshuman1/data/112/DC-Stations.csv")
 ```
@@ -330,13 +330,14 @@ Trips %>%
   pivot_wider(names_from = client,
               values_from = proportion)
 ```
-  It seems that the highest proportion of casual riders is on Saturday and the highest propotion for registered riders is Wednesday. These patterns seem logical since weekend casual travel is more common while traveling during the week for work is more common. 
-
+  It seems that the highest proportion of casual riders is on Saturday and the highest proportion for registered riders is Wednesday. These patterns seem logical since weekend casual travel is more common while traveling during the week for work is more common. 
 **DID YOU REMEMBER TO GO BACK AND CHANGE THIS SET OF EXERCISES TO THE LARGER DATASET? IF NOT, DO THAT NOW.**
 
 ## GitHub link
 
   20. Below, provide a link to your GitHub page with this set of Weekly Exercises. Specifically, if the name of the file is 03_exercises.Rmd, provide a link to the 03_exercises.md file, which is the one that will be most readable on GitHub.
+
+https://github.com/zjumani/week3final.git
 
 ## Challenge problem! 
 
